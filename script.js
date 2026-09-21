@@ -127,3 +127,43 @@ function crearPetalos() {
         }, 10000);
     }
 }
+// ================================
+// CREAR LUCIÉRNAGAS
+// ================================
+
+function crearLuciernagas() {
+
+    const contenedor = document.querySelector(".luciernagas");
+
+    for (let i = 0; i < 14; i++) {
+
+        const luciernaga = document.createElement("div");
+
+        luciernaga.classList.add("luciernaga-extra");
+
+        luciernaga.style.left =
+            (5 + Math.random() * 90) + "vw";
+
+        luciernaga.style.top =
+            (20 + Math.random() * 60) + "vh";
+
+        luciernaga.style.animationDuration =
+            (3 + Math.random() * 4) + "s";
+
+        luciernaga.style.animationDelay =
+            Math.random() * 4 + "s";
+
+        const tamaño =
+            3 + Math.random() * 4;
+
+        luciernaga.style.width =
+            tamaño + "px";
+
+        luciernaga.style.height =
+            tamaño + "px";
+
+        contenedor.appendChild(luciernaga);
+    }
+}
+
+crearLuciernagas();
